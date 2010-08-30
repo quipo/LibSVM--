@@ -1,0 +1,17 @@
+This is a VERY experimental rewrite of libSVM and LibSVM-Plus.
+
+@link http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+@link http://wiki.github.com/vincenzo/LIBSVM-Plus/
+
+TODO:
+- continue refactoring
+- remove debug messages
+- add library namespace
+- add abstract factory for Kernel and SVM types so it's possible to extend the library
+- reduce dependencies
+- revise includes to speed up compile time
+- implement cache
+- optimise code (GPU? Threads?)
+- add tests
+- add language bindings
+- ...
