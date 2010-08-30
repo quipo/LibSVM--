@@ -6,6 +6,7 @@ This is a VERY experimental rewrite of libSVM and LibSVM-Plus.
 TODO:
 - continue refactoring
 - remove debug messages
+- remove unused code
 - add library namespace
 - add abstract factory for Kernel and SVM types so it's possible to extend the library
 - reduce dependencies
@@ -14,4 +15,5 @@ TODO:
 - optimise code (GPU? Threads?)
 - add tests
 - add language bindings
-- ...
+- add documentation
+- 

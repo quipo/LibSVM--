@@ -1,6 +1,6 @@
 /* 
- * File:   Matrix.h
- * Author: lorenzo
+ * File:   SVM_Problem.h
+ * Author: Lorenzo Alberton
  *
  * Created on July 4, 2010, 5:30 PM
  */
@@ -51,7 +51,7 @@ enum { C_SVC, C_SVC_L2, NU_SVC, ONE_CLASS, EPSILON_SVR, NU_SVR, SVDD, SVDD_L2 };
  * --
  * Vincenzo Russo (vincenzo.russo@neminis.org)
  */
-enum KernelTypes { LINEAR, POLYNOMIAL, GAUSSIAN, SIGMOID, STUMP, PERCEPTRON, LAPLACE, EXPONENTIAL, PRECOMPUTED };	/* kernel_type */
+enum KernelTypes { LINEAR, POLYNOMIAL, GAUSSIAN, SIGMOID, STUMP, PERCEPTRON, LAPLACE, EXPONENTIAL, PRECOMPUTED, NEURAL };	/* kernel_type */
 
 
 /*

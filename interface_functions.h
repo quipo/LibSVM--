@@ -1,6 +1,6 @@
 /* 
- * File:   SVM_Solver.h
- * Author: lorenzo
+ * File:   interface_functions.h
+ * Author: Lorenzo Alberton
  *
  * Created on July 5, 2010, 2:00 PM
  */

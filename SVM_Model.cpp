@@ -1,6 +1,6 @@
 /* 
- * File:   Kernel.cpp
- * Author: lorenzo
+ * File:   SVM_Model.cpp
+ * Author: Lorenzo Alberton
  * 
  * Created on July 4, 2010, 4:54 PM
  */
@@ -12,7 +12,7 @@ static const char *svm_type_table[] = {
 };
 
 static const char *kernel_type_table[] = {
-    "linear", "polynomial", "gaussian", "sigmoid", "stump", "perc", "laplace", "exponential", "precomputed", NULL
+    "linear", "polynomial", "gaussian", "sigmoid", "stump", "perc", "laplace", "exponential", "precomputed", "neural", NULL
 };
 
 /**
@@ -48,6 +48,9 @@ SVM_Model::SVM_Model(const SVM_Parameter & param, unsigned int dim) : param(para
             break;
         case PRECOMPUTED:
             kernel = new SVM_Kernel_Precomputed(param);
+            break;
+        case NEURAL:
+            kernel = new SVM_Kernel_Neural(param);
             break;
     }
 }
@@ -232,6 +235,7 @@ int SVM_Model::save(const char *model_file_name) const {
         || param.kernel_type == SIGMOID
         || param.kernel_type == LAPLACE
         || param.kernel_type == EXPONENTIAL
+        || param.kernel_type == NEURAL
     ) {
         fp << "gamma " << param.gamma << "\n";
     }
@@ -240,6 +244,7 @@ int SVM_Model::save(const char *model_file_name) const {
         || param.kernel_type == SIGMOID
         || param.kernel_type == STUMP
         || param.kernel_type == PERCEPTRON
+        || param.kernel_type == NEURAL
     ) {
         fp << "coef0 " << param.coef0 << "\n";
     }

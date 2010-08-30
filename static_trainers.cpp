@@ -1,6 +1,6 @@
 /* 
  * File:   static_trainers.cpp
- * Author: lorenzo
+ * Author: Lorenzo Alberton
  * 
  * Created on July 5, 2010, 2:00 PM
  */

@@ -1,6 +1,6 @@
 /* 
- * File:   Kernel.h
- * Author: lorenzo
+ * File:   SVM_Model.h
+ * Author: Lorenzo Alberton
  *
  * Created on July 4, 2010, 4:54 PM
  */
@@ -16,6 +16,7 @@
 #include "Kernel/Linear.h"
 #include "Kernel/Polynomial.h"
 #include "Kernel/Gaussian.h"
+#include "Kernel/Neural.h"
 #include "Kernel/Sigmoid.h"
 #include "Kernel/Stump.h"
 #include "Kernel/Perceptron.h"
@@ -54,7 +55,7 @@ public:
  * */
 class SVM_Model : public decision_function {
 public:
-    enum { LINEAR, POLYNOMIAL, GAUSSIAN, SIGMOID, STUMP, PERCEPTRON, LAPLACE, EXPONENTIAL, PRECOMPUTED };	/* kernel_type */
+    enum { LINEAR, POLYNOMIAL, GAUSSIAN, SIGMOID, STUMP, PERCEPTRON, LAPLACE, EXPONENTIAL, PRECOMPUTED, NEURAL };	/* kernel_type */
 
 public:
     SVM_Model(unsigned int dim) : dimension(dim) { };

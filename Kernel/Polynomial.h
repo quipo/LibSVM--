@@ -1,6 +1,6 @@
 /* 
- * File:   Kernel.h
- * Author: lorenzo
+ * File:   Polynomial.h
+ * Author: Lorenzo Alberton
  *
  * Created on July 4, 2010, 4:54 PM
  */

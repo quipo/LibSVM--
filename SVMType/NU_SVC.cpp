@@ -1,6 +1,6 @@
 /* 
  * File:   NU_SVC.cpp
- * Author: lorenzo
+ * Author: Lorenzo Alberton
  * 
  * Created on July 4, 2010, 4:54 PM
  */

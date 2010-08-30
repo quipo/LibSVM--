@@ -1,6 +1,6 @@
 /* 
- * File:   Kernel.cpp
- * Author: lorenzo
+ * File:   SVM_Kernel.cpp
+ * Author: Lorenzo Alberton
  * 
  * Created on July 4, 2010, 4:54 PM
  */

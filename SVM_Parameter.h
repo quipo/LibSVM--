@@ -1,6 +1,6 @@
 /* 
  * File:   SVM_Parameter.h
- * Author: lorenzo
+ * Author: Lorenzo Alberton
  *
  * Created on July 4, 2010, 5:30 PM
  */
@@ -15,21 +15,21 @@ class SVM_Parameter {
   public:
 	int svm_type;	/* SVM Type */
 	int kernel_type;/* Kernel Type */
-	int degree;		/* for poly */
-	double gamma;	/* for poly/gaussian/sigmoid */
-	double coef0;	/* for poly/sigmoid */
+	int degree;	/* for polynomial */
+	double gamma;	/* for polynomial/gaussian/sigmoid */
+	double coef0;	/* for polynomial/sigmoid */
 
 	/* these are for training only */
-	double cache_size; 	/* in MB */
+	double cache_size;              /* in MB */
 	double eps;			/* stopping criteria (the lower eps, the better the approximation) */
 	double C;			/* cost for C_SVC, SVDD, EPSILON_SVR and NU_SVR */
 	unsigned int nr_weight;		/* for C_SVC */
 	std::vector<int> weight_label;	/* for C_SVC */
-	std::vector<double> weight;		/* for C_SVC */
+	std::vector<double> weight;	/* for C_SVC */
 	double nu;			/* for NU_SVC, ONE_CLASS, and NU_SVR */
 	double p;			/* for EPSILON_SVR */
-	int shrinking;		/* use the shrinking heuristics */
-	int probability; 	/* do probability estimates */
+	int shrinking;                  /* use the shrinking heuristics */
+	int probability;                /* do probability estimates */
 
     friend std::ostream & operator<<(std::ostream & os, const SVM_Parameter & param) {
         os << std::setprecision(3);

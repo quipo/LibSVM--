@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: lorenzo
+ * Author: Lorenzo Alberton
  *
  * Created on July 3, 2010, 2:26 PM
  */

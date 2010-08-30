@@ -1,6 +1,6 @@
 /* 
- * File:   Kernel.h
- * Author: lorenzo
+ * File:   SVM_SVMType.h
+ * Author: Lorenzo Alberton
  *
  * Created on July 4, 2010, 4:54 PM
  */
@@ -18,9 +18,10 @@ typedef signed char schar;
 #include "SVM_Solutioninfo.h"
 #include "Cache.h"
 #include "LRUCache.h"
-#include "Kernel/Linear.h"
-#include "Kernel/Polynomial.h"
 #include "Kernel/Gaussian.h"
+#include "Kernel/Linear.h"
+#include "Kernel/Neural.h"
+#include "Kernel/Polynomial.h"
 #include "Kernel/Sigmoid.h"
 #include "Kernel/Stump.h"
 #include "Kernel/Perceptron.h"
@@ -68,6 +69,9 @@ class SVM_SVMType {
             case PRECOMPUTED:
                 kernel = new SVM_Kernel_Precomputed(param);
                 break;
+            case NEURAL:
+                kernel = new SVM_Kernel_Neural(param);
+                break;
         }
     };
 
@@ -109,6 +113,10 @@ class SVM_SVMType {
         case PRECOMPUTED:
             std::cout << " (precomputed)";
             kernel = new SVM_Kernel_Precomputed(prob.x, param);
+            break;
+        case NEURAL:
+            std::cout << " (neural)";
+            kernel = new SVM_Kernel_Neural(prob.x, param);
             break;
         }
     };
@@ -207,7 +215,7 @@ class SVM_SVMType {
   protected:
     std::vector<Qfloat> QD;
     /* kernel_type */
-    enum { LINEAR, POLYNOMIAL, GAUSSIAN, SIGMOID, STUMP, PERCEPTRON, LAPLACE, EXPONENTIAL, PRECOMPUTED };
+    enum { LINEAR, POLYNOMIAL, GAUSSIAN, SIGMOID, STUMP, PERCEPTRON, LAPLACE, EXPONENTIAL, PRECOMPUTED, NEURAL };
 };
 
 #endif	/* SVM_SVMType_H */

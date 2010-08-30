@@ -1,3 +1,9 @@
+/* 
+ * File:   svm-scale.cpp
+ * Author: Lorenzo Alberton
+ * 
+ * Created on July 5, 2010, 2:00 PM
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

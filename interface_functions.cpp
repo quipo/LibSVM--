@@ -1,6 +1,6 @@
 /* 
  * File:   interface_functions.cpp
- * Author: lorenzo
+ * Author: Lorenzo Alberton
  * 
  * Created on July 5, 2010, 2:00 PM
  */
